@@ -14,6 +14,9 @@ import {
 
 import ResponsiveWebDesignImage from "../images/RWD.png";
 import JavaScriptAlgorithmsImage from "../images/LJS.png";
+import AsozialImage from "../images/asozial.png";
+import SMMImage from "../images/SMM_finance.png";
+import WEB_Image from "../images/WEB_mirkoeffe.png";
 
 const certificates = [
   {
@@ -37,21 +40,26 @@ const certificates = [
   },
 ];
 
-// Array to hold project information
 const projects = [
   {
-    title: "Project 1",
-    link: "https://github.com/yourusername/project1", // Placeholder link
-    image: "https://via.placeholder.com/150", // Placeholder image
-    description: "A brief description of Project 1.",
+    title: "Asozial",
+    link: "https://asozial.dev",
+    image: AsozialImage,
+    description: "A social app for anti-social developers",
   },
   {
-    title: "Project 2",
-    link: "https://github.com/yourusername/project2", // Placeholder link
-    image: "https://via.placeholder.com/150", // Placeholder image
-    description: "A brief description of Project 2.",
+    title: "SMM Finance",
+    link: "https://finance-smm.netlify.app/",
+    image: SMMImage,
+    description: "A demo app to track Forex, Stock and Cryptos",
   },
-  // Add more projects here as needed
+  {
+    title: "mirkoeffe.shop",
+    link: "https://mirkoeffe.shop",
+    image: WEB_Image,
+    description:
+      "My portfolio page created with the knowledge acquired at Ironhack bootcamp",
+  },
 ];
 
 const Portfolio: React.FC = () => {
@@ -81,7 +89,16 @@ const Portfolio: React.FC = () => {
         {certificates.map((certificate, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Link href={certificate.link} target="_blank" underline="none">
-              <Card>
+              <Card
+                sx={{
+                  boxShadow: "0 4px 8px rgba(255, 255, 255, 0.3)",
+                  transition: "transform 0.3s ease",
+                  "&:hover": {
+                    transform: "scale(1.05)",
+                    boxShadow: "0 8px 16px rgba(255, 255, 255, 0.5)",
+                  },
+                }}
+              >
                 <CardMedia
                   component="img"
                   height="140"
@@ -118,7 +135,15 @@ const Portfolio: React.FC = () => {
         {projects.map((project, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Link href={project.link} target="_blank" underline="none">
-              <Card>
+              <Card
+                sx={{
+                  boxShadow: "0 4px 8px rgba(255, 255, 255, 0.3)",
+                  transition: "transform 0.3s ease",
+                  "&:hover": {
+                    transform: "scale(1.05)",
+                  },
+                }}
+              >
                 <CardMedia
                   component="img"
                   height="140"

@@ -30,9 +30,7 @@ const techStack = [
   { name: "Express", src: ExpressIcon },
   { name: "MongoDB", src: MongoDbIcon },
   { name: "Mongoose", src: MongooseIcon },
-  { name: "TypeScript", src: TypeScriptIcon } /* 
-  { name: "NoSQL", src: "/path/to/nosql-icon.png" },
-  { name: "SQL", src: "/path/to/sql-icon.png" }, */,
+  { name: "TypeScript", src: TypeScriptIcon },
 ];
 
 const Home: React.FC = () => {
@@ -115,33 +113,46 @@ const Home: React.FC = () => {
         </Grid>
       </Container>
 
-      {/* Lorem Ipsum Paragraph Below the Container */}
       <Box
         sx={{
-          p: 3,
-          maxWidth: "calc(100% - 312px)", // Consistent with the top Container
-          marginX: "auto", // Center the container horizontally
+          p: 2,
+          maxWidth: "calc(100% - 326px)",
+          marginX: "auto",
         }}
       >
-        <Typography variant="body1" sx={{ fontSize: 18 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget
-          urna a arcu lacinia laoreet. Maecenas scelerisque, mi ac varius
-          tincidunt, lorem odio dictum nisl, sit amet facilisis mauris dolor sit
-          amet justo. Integer nec odio. Praesent libero. Sed cursus ante dapibus
-          diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis
-          sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper
-          porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent
-          taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-          himenaeos.
+        <Typography
+          variant="body1"
+          sx={{ fontSize: 16, textAlign: "justify" }}
+          color="primary"
+        >
+          Passionate Full Stack Web Developer with expertise in the MERN stack
+          and TypeScript. Having recently completed a rigorous bootcamp, I bring
+          a fresh perspective and a strong foundation in modern web development
+          technologies. My journey into tech is fueled by a lifelong fascination
+          with computers and a diverse background in problem-solving and
+          communication.
+          <br />
+          While I am particularly interested in working for companies in the
+          music, automotive, motorsport, and video game industries, I am also
+          open to opportunities in other sectors where I can leverage my skills
+          and creativity to drive impactful results. My experience includes
+          developing a Minimum Viable Product (MVP) for a social app for
+          developers, a project I’m committed to enhancing with my team.
+          <br />
+          What sets me apart is my ability to infuse positive and contagious
+          energy into any team, fostering a happy, productive work environment
+          that drives timely delivery and innovative solutions. I’m excited to
+          bring my fresh ideas, adaptability, and collaborative spirit to your
+          organization, helping you build dynamic, user-centered web
+          applications that make a real impact.
         </Typography>
       </Box>
 
-      {/* Tech Stack Section Aligned with the Rest */}
       <Box
         sx={{
-          p: 3,
-          maxWidth: "calc(100% - 312px)", // Consistent with the top Container
-          marginX: "auto", // Center the container horizontally
+          p: 2,
+          maxWidth: "calc(100% - 320px)",
+          marginX: "auto",
         }}
       >
         <Typography
