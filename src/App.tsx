@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import theme from "./styles/theme";
+import { ThemeProvider, CssBaseline, Box } from "@mui/material";
 
-function App() {
+import Home from "./components/Home";
+import Portfolio from "./components/Portfolio";
+import DrawerAppBar from "./components/DrawerAppBar";
+import Footer from "./components/Footer";
+import ErrorPage from "./components/ErrorPage";
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "100vh",
+        }}
+      >
+        <Router>
+          <DrawerAppBar />
+          <Box sx={{ flex: 1 }}>
+            {" "}
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+              <Route path="*" element={<ErrorPage />} />
+            </Routes>
+          </Box>
+          <Footer />
+        </Router>
+      </Box>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;
