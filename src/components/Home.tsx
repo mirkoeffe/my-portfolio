@@ -39,7 +39,7 @@ const Home: React.FC = () => {
       <Container
         sx={{
           p: 3,
-          maxWidth: "calc(100% - 100px)",
+          maxWidth: "calc(100% - 312px)",
           marginX: "auto",
         }}
       >
@@ -79,12 +79,7 @@ const Home: React.FC = () => {
             </Typography>
 
             {/* Third Line: Mostly focused on Back-end */}
-            <Typography
-              variant="h4"
-              component="h2"
-              gutterBottom
-              sx={{ whiteSpace: "nowrap" }}
-            >
+            <Typography variant="h4" component="h2" gutterBottom>
               <Box
                 component="span"
                 sx={{ color: "primary.main", fontWeight: "inherit" }}
@@ -106,7 +101,10 @@ const Home: React.FC = () => {
               <Avatar
                 alt="Mirko Fede"
                 src={profileImage}
-                sx={{ width: 180, height: 180 }}
+                sx={{
+                  width: { xs: 112, sm: 150, md: 200, lg: 224 },
+                  height: { xs: 112, sm: 150, md: 200, lg: 224 },
+                }}
               />
             </Box>
           </Grid>
