@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
 
         {/* Email Icon */}
         <Grid item>
-          <Link href="mailto:mirko@mirkoeffe.shop">
+          <Link href="mailto:mirkoeffe91@gmail.com">
             <EmailIcon
               sx={{
                 fontSize: 32,
