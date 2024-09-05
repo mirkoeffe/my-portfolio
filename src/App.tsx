@@ -8,6 +8,7 @@ import Portfolio from "./components/Portfolio";
 import DrawerAppBar from "./components/DrawerAppBar";
 import Footer from "./components/Footer";
 import ErrorPage from "./components/ErrorPage";
+import About from "./components/About";
 
 const App: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ const App: React.FC = () => {
             {" "}
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="*" element={<ErrorPage />} />
             </Routes>
