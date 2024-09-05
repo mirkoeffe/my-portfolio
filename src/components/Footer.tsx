@@ -1,10 +1,9 @@
 import React from "react";
 import { Box, Grid, Typography, Avatar, Link } from "@mui/material";
-
 import GitHubIcon from "../images/Github.svg";
 import LinkedInIcon from "../images/LinkedIn.svg";
 import EmailIcon from "@mui/icons-material/Email";
-import LanguageIcon from "@mui/icons-material/Language";
+import PhoneIcon from "@mui/icons-material/Phone"; // Import Phone Icon
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -28,7 +27,7 @@ const Footer: React.FC = () => {
         alignItems="center"
         sx={{ flexWrap: "nowrap" }}
       >
-        {/* Icons */}
+        {/* GitHub Icon */}
         <Grid item>
           <Link
             href="https://github.com/mirkoeffe"
@@ -42,6 +41,8 @@ const Footer: React.FC = () => {
             />
           </Link>
         </Grid>
+
+        {/* LinkedIn Icon */}
         <Grid item>
           <Link
             href="https://linkedin.com/in/mirko-fede"
@@ -55,12 +56,15 @@ const Footer: React.FC = () => {
             />
           </Link>
         </Grid>
+
         {/* Copyright and Year */}
         <Grid item>
           <Typography variant="body2" sx={{ ml: 2, color: "black" }}>
             &copy; {currentYear} Mirko Fede. All rights reserved.
           </Typography>
         </Grid>
+
+        {/* Email Icon */}
         <Grid item>
           <Link href="mailto:mirko@mirkoeffe.shop">
             <EmailIcon
@@ -73,20 +77,11 @@ const Footer: React.FC = () => {
             />
           </Link>
         </Grid>
+
+        {/* Phone Number with Phone Icon */}
         <Grid item>
-          <Link
-            href="https://asozial.dev"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <LanguageIcon
-              sx={{
-                fontSize: 32,
-                color: "black",
-                display: "flex",
-                alignItems: "center",
-              }}
-            />
+          <Link href="tel:+4917663619554">
+            <PhoneIcon sx={{ fontSize: 32, color: "black" }} />
           </Link>
         </Grid>
       </Grid>
