@@ -37,9 +37,9 @@ const Home: React.FC = () => {
   return (
     <>
       <Container
+        maxWidth="lg"
         sx={{
           p: 3,
-          maxWidth: "calc(100% - 312px)",
           marginX: "auto",
         }}
       >
@@ -114,13 +114,13 @@ const Home: React.FC = () => {
       <Box
         sx={{
           p: 2,
-          maxWidth: "calc(100% - 326px)",
+          maxWidth: "lg",
           marginX: "auto",
         }}
       >
         <Typography
           variant="body1"
-          sx={{ fontSize: 16, textAlign: "justify" }}
+          sx={{ fontSize: 17, textAlign: "justify" }}
           color="primary"
         >
           Passionate Full Stack Web Developer with expertise in the MERN stack
@@ -130,12 +130,14 @@ const Home: React.FC = () => {
           with computers and a diverse background in problem-solving and
           communication.
           <br />
+          <br />
           While I am particularly interested in working for companies in the
           music, automotive, motorsport, and video game industries, I am also
           open to opportunities in other sectors where I can leverage my skills
           and creativity to drive impactful results. My experience includes
           developing a Minimum Viable Product (MVP) for a social app for
           developers, a project I’m committed to enhancing with my team.
+          <br />
           <br />
           What sets me apart is my ability to infuse positive and contagious
           energy into any team, fostering a happy, productive work environment
@@ -145,11 +147,12 @@ const Home: React.FC = () => {
           applications that make a real impact.
         </Typography>
       </Box>
+      <Toolbar />
 
       <Box
         sx={{
           p: 2,
-          maxWidth: "calc(100% - 320px)",
+          maxWidth: "lg",
           marginX: "auto",
         }}
       >
@@ -158,6 +161,7 @@ const Home: React.FC = () => {
           component="h2"
           gutterBottom
           color="primaryAccent"
+          sx={{ fontStyle: "italic" }}
         >
           Tech Stack
         </Typography>

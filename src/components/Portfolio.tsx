@@ -67,7 +67,7 @@ const Portfolio: React.FC = () => {
     <Container
       sx={{
         p: 3,
-        maxWidth: "calc(100% - 100px)",
+        maxWidth: "lg",
         marginX: "auto",
       }}
     >
